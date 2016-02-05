@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Farbmanagement in Scribus</title>
+</head>
+<body>
+<h2>Farbmanagement in Scribus</h2>
+<h3>&Uuml;berblick</h3>
+
+<p>Das Ziel eines Farbmanagements ist es, die Unterschiede zwischen den Farben auf dem Monitor und dem gedruckten Produkt zu minimieren, und die Farben anzuzeigen, die au&szlig;erhalb der &raquo;Farbskala&laquo; z.B. der Druckerei liegen. Das Problem dabei ist, da&szlig; man dazu das Farbprofil des Druckers und ein m&ouml;glichst genaues des Monitors braucht. Das ganze Konzept, die Einstellungsm&ouml;glichkeiten und die Beschreibungen k&ouml;nnen f&uuml;r neue Benutzer wirklich verwirrend sein. Ohne Vorwissen der Terminologie ist es wirklich <strong>sehr</strong> leicht, die falschen Einstellungen zu w&auml;hlen. Dies f&uuml;hrt oft dazu, da&szlig; Bilder entweder auf dem Monitor oder nach dem Drucken oder bei beidem schlecht aussehen. Dann sagt ein neuer Anwender &raquo;Es reicht!&laquo; &ndash; und schaltet das Farbmanagement ab.</p>
+
+<p>Um es kurz zu machen: <strong>Tun Sie das nicht!</strong> Wenn Sie erst einmal ein paar grundlegende Begriffe verstanden haben, werden Sie in der Lage sein, gedruckte Dokumente pr&auml;zise zu erstellen. Speziell f&uuml;r einen sp&auml;teren Vierfarb-Druck ist dies entscheidend.</p>
+
+<p>Der Weg zu einem verl&auml;&szlig;lichen Farbmanagement (der Druck sieht so aus wie auf dem Monitor):</p>
+
+<ol>
+	<li>Lernen Sie ein wenig &uuml;ber die Idee und die Terminologie des Farbmanagements. Es gibt dazu viele gute B&uuml;cher und Webseiten (z.B. <a href="http://www.poynton.com">hier</a>).</li> 
+	<li>Richten Sie die Farbprofile vern&uuml;nftig ein. Das Wichtigste ist, ein korrektes Monitor-Profil zu bekommen. <a href="toolbox14.html">Lprof</a> ist daf&uuml;r hervorragend geeignet. <i>Ohne ein sauber eingerichtetes Monitor-Profil werden Sie keine korrekte Vorschau auf dem Bildschirm haben und keine zufriedenstellende Druckergebnisse bekommen.</i> </li>
+	<li>Richten Sie die Farbprofile in den Bildbearbeitungsprogrammen sauber ein. Heutzutage unterst&uuml;tzt nicht nur Closed-Source-Software Farbmanagement, sondern auch alle gr&ouml;&szlig;eren Open-Source-Programme, wie GIMP, Krita, digiKam, Inkscape oder sK1.</li>
+</ol>
+
+<p>Das Farbmanagementsystem in Scribus ist f&uuml;r &raquo;sanfte Korrekturen&laquo; Ihrer Dokumente eingerichtet. Scribus zeigt auch eine Warnung an, wenn Farben von einer Druckerei nicht genau reproduziert werden k&ouml;nnen, da die meisten professionellen Drucker im Vergleich zu einem Bildschirm (RGB) eine eingeschr&auml;nkte Farbskala (CMYK) haben. Scribus wird keine Farbprofile der Bilder einbetten oder &auml;ndern. (Manche Bildformate, wie EPS, JPEG, PNG oder TIFF, k&ouml;nnen ein ICM- oder ICC-Profil beinhalten.)</p>
+
+<table width="100%"><tr><td align="center"><img src="images/rgb-cmyk.png"/></td></tr>
+    <tr><td><div align="center"><i>Das RGB-Modell (links) hat ein wesentlich gr&ouml;&szlig;eres Spektrum als das CMYK-Modell (rechts).</td></tr></table>
+
+<p><strong>Was sind Farb- oder Ger&auml;te-Profile?</strong></p>
+
+<p><strong>ICC-</strong> oder <strong>ICM-</strong>Profile sind spezielle Dateien, die die Farb-Charakteristik eines Ger&auml;ts wie eines Scanners, Monitors oder Druckers angeben &ndash; grunds&auml;tzlich hat jedes Ger&auml;t, das Farben erzeugen, anzeigen oder ver&auml;ndern kann, deshalb ein <b>Ger&auml;te-Profil</b>.</p>
+<p>Dazu kommen noch <strong>Ger&auml;t-unabh&auml;ngige</strong> oder <strong>Arbeitsraum</strong>-Farbprofile. Das sind besondere Dateien, die man sich als &raquo;&Uuml;bersetzer&laquo; vorstellen kann, die die Farbwerte von einem Profil in ein anderes konvertieren.</p>
+<p>Eine ICC- oder ICM-Datei ist eine Reihe von Tabellen, die die mathematischen Werte enthalten, durch die das Ger&auml;t Farbe mi&szlig;t und darstellt. Gl&uuml;cklicherweise folgen diese Profile einem <a href="http://www.color.org ">offenen und internationalen Standard</a> und funktionieren unter Mac&nbsp;OS&nbsp;X genauso wie unter OS/2, eCS, Windows, Linux oder UNIX.</p>
+
+
+<h3>Farbmanagement aktivieren</h3>
+<p>Damit das Farbmanagement richtig funktioniert, mu&szlig; folgendes installiert und aktiviert sein:</p>
+<ul>
+<li>Die littleCMS Library. Diese ist Standard bei der Installation auf Mac&nbsp;OS&nbsp;X, OS/2, eComStation, Haiku und Windows, bei Linux und UNIX eine Abh&auml;ngigkeit.</li>
+<li>Es braucht mindestens ein RGB- und ein CMYK-Profil. Scribus liefert zwei elementare Profile, so da&szlig; das Farbmanagement direkt nach der Installation aktiviert werden kann. In der Praxis braucht es mehr: ein sRGB-Profil f&uuml;r die meisten RGB-Farben und eins f&uuml;r jedes Ger&auml;t, eins f&uuml;r den Monitor, das mit einem Profiling-Tool erstellt werden sollte, und verschiedene CMYK-Profile f&uuml;r kommerzielle Druckereien. <br>Einige CMYK-Profile sind &raquo;Druckstandards&laquo;, da sie standardisierte Druckbedingungen in Europa, Japan und Nordamerika beschreiben.<br> Verl&auml;&szlig;liche ICC-Profile kann man sich von verschiedenen Webseiten herunterladen. Ein Standard-Satz in der Industrie sind die &raquo;Adobe ICC-Profile&laquo;, da sie bei den Adobe-Programmen dabei sind. Man kann sie von der <a href="http://www.adobe.com/support/downloads/iccprofiles">Adobe-Webseite</a> herunterladen. Ein qualitativ sehr hochwertiger Profil-Satz kommt von <a href="http://www.basiccolor.de">basICColor GmbH</a>, einem deutschen Unternehmen, das sich auf Farbmanagement spezialisiert hat. Die Profile mit einer CC-Lizenz gibt es <a href="http://www.colormanagement.org">hier</a>.</li>
+<li>Eine neuere Entwicklung beim Linux-Desktop ist die Implementierung von Farbmanagement nahezu &uuml;berall, mindestens aber da, wo es Sinn macht. Das f&uuml;hrt dazu, da&szlig; nicht nur Bildbearbeitungs-, Vektorgrafik- oder DTP-Programme Farbmanagement nutzen, sondern auch Internetbrowser oder einfache Bildbetrachter. Daher bieten viele moderne Linux-Distributionen etliche hochwertige ICC-Profile zur einfachen Installation an, darunter die oben angesprochenen Adobe ICC- und basICColor-Profile. Je nach Lizenz-Politik einiger Distributionen mu&szlig; man dazu das &raquo;non-free&laquo;-Repository freischalten, oder wie auch immer die nicht-(L)GPL/BSD-Pakete der Distribution hei&szlig;en.</li>
+</ul>
+
+<h3>Wo man die Farbprofile speichert</h3>
+<ul>
+<li><b>Linux/UNIX:</b> <code>/usr/share/color/icc</code> (systemweit) und <code>/home/username/.color/icc</code> (benutzerspezifisch).</li>
+<li><b>Mac OS X:</b> <code>/Library/ColorSync/Profiles</code>.</li>
+<li><b>Windows:</b>: <code>C:\WINNT\system32\spool\drivers\color</code> (Windows 2000) und <code>C:\Windows\system32\spool\drivers\color</code> (Windows XP, Vista, 7).<br>
+<i>Achtung: Bei 64-Bit-Windows-Systemen finden manche 32-Bit-Programme die Profile nicht im <code>system32</code>-Ordner, da sie unter <code>C:\Windows\SysWOW64</code> suchen. Das ist ein Ordner, der f&uuml;r die Kompatibilit&auml;t von 32-Bit-Programmen ben&ouml;tigt wird (Das ist kein Schreibfehler: der Ordner mit &raquo;32&laquo; im Namen ist f&uuml;r 64-Bit-Dateien, der mit &raquo;64&laquo; ist f&uuml;r 32-Bit-Dateien!). Wenn man ein 32-Bit-Programm auf einer 64-Bit-Version von Windows ausf&uuml;hrt und die Farbprofile nicht verf&uuml;gbar sind, sollte man sie auch nach <code>C:\Windows\SysWOW64\spool\drivers\color</code></i> kopieren.</li>
+<li><b>OS/2 and eComStation:</b> <code>X:\scribus-directory\lib\scribus\profiles</code>. <br>
+<i>Bei OS/2 und eComStation gibt es kein systemweites Farbmanagement und so mu&szlig; jedes Programm, das Farbmanagement nutzt, wie z.B. Scribus oder GIMP, die Profile in seinem eigenem Verzeichnis anlegen. Es ist allerdings auch m&ouml;glich, ein Verzeichnis mit allen Profilen anzulegen (z.B. </i><code>X:\ICC</code>)<i>, und dieses als zus&auml;tzliche Quelle f&uuml;r Profile anzugeben. Bei Scribus kann man den Pfad unter <a href="settings1.html#1">Allgemeine Einstellungen</a> &ndash; &raquo;Allgemein&laquo; eintragen.</i></li>
+<li><b>Haiku:</b> <code>/boot/apps/Scribus/share/scribus/profiles</code>.</li>
+</ul>
+
+<br />
+</body>
+</html>
