@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>F&uuml;r Ausgabe sammeln</title>
+</head>
+<body>
+<h2>F&uuml;r Ausgabe sammeln</h2>
+<p><i>F&uuml;r Ausgabe sammeln</i> ist eine besondere Art, ein Scribus-Dokument zu speichern.</p>
+<p>Wenn man allein an einem einzelnen Computer mit Scribus arbeitet, wird man <i>F&uuml;r Ausgabe sammeln</i> nicht unbedingt ben&ouml;tigen. Wenn man an mehreren Computern arbeitet, ist diese Funktion bestimmt n&uuml;tzlich, vor allem, wenn man verschiedene Betriebssysteme nutzt. Und arbeitet man mit Anderen gemeinsan an einem Scribus-Dokument, dann ist diese Funktion nehezu unverzichtbar.</p>
+<p>Wenn man gut organisiert ist, hat man wahrscheinlich einen Ordner f&uuml;r ein Projekt, in dem alle Bilder und alles andere ist. Aber selbst dann ist es nicht einfach damit getan, den Ordner mit jemand zu teilen, da es gut m&ouml;glich ist, da&szlig; der Mitarbeiter dann doch ein Bild nicht findet oder eine Schrift nicht installiert hat.</p>
+<p>Mit <i>F&uuml;r Ausgabe sammeln</i> kann man bequem alle Elemente eines Dokuments in einem Ordner sammeln.</p>
+<h3>Der Proze&szlig;</h3>
+<p>Im Grunde erstellt <i>F&uuml;r Ausgabe sammeln</i> einen Ordner f&uuml;r ein Projekt, und Scribus speichert darin das Dokument mit seinen Bildern und, falls gew&uuml;nscht, Schriften und Farbprofilen. Theoretisch braucht man keinen neuen Ordner, aber meistens ist es sinnvoll, in einem Ordner nur die Daten f&uuml;r ein einzelnes Projekt zu haben.</p>
+<p>Beim Speichern des Dokuments werden die Links zu den Bildern auf die Kopien in dem neuen Ordner ge&auml;ndert. Ein Beispiel:</p>
+<p>&nbsp;</p>
+<table cellpadding="3" width="100%">
+<tr><td><img src="images/collect_out1.png"></td>
+<td><p>Hier sammeln wir ein Beispiel-Projekt. Beim Klick auf <i>Sammeln f&uuml;r Ausgabe</i> erscheint dieser Dialog, der wie man sieht ausschlie&szlig;lich mit Ordnern arbeitet. Hier haben wir einen neuen Ordner namens &raquo;conference&laquo; erstellt. Das Bild ist xfce auf Linux, bei anderen Systemen kann der Dialog anders aussehen, aber die Funktionen sind die gleichen.</p>
+<p>Als n&auml;chstes w&auml;hlen wir den <i>conference</i>-Ordner.</p></td></tr>
+<tr><td><img src="images/collect_out2.png"></td>
+<td><p>Unser neuer Ordner ist leer (dieser Dialog w&uuml;rde nur Ordner anzeigen). Unten haben wir <i>Schriften einbetten</i> und <i>Farbprofile einbeziehen</i> ausgew&auml;hlt. Falls wir auch <i>Datei komprimieren</i> angeklickt h&auml;tten, w&uuml;rden wir eine gzip-Datei erhalten. Das ist manchmal bei sehr gro&szlig;en Scribus-Dateien sinnvoll, hier aber unn&ouml;tig. Komprimierte Dateien haben die Endung <code>.sla.gz</code>.</p>
+<p>Jetzt klicken wir auf <i>OK</i>.</p></td></tr>
+</table>
+<h3>Das Ergebnis</h3>
+
+<table cellpadding="3" width="80%">
+<tr><td><img src="images/collect_out3.png"></td>
+<td><p>Dies sind die Dateien, die Scribus in diesem Ordner gespeichert hat. Wir sehen au&szlig;er dem Dokument <code>conference_present.sla</code> verschiedene Bilder, unsere Schriften mit der Endung <code>.ttf</code> und die ICC-Profile mit der Endung <code>.icm</code>.</p>
+<p>Scribus arbeitet jetzt mit dieser Kopie des Dokuments und dem Inhalt des Ordners anstatt mit der Original-Datei und ihrem Inhalt, wo auch immer der verstreut war. Wir k&ouml;nnen nun in diesem Ordner das Dokument wie jedes andere &ouml;ffnen.</p>
+<p>Man sieht nun, wie dies das Hin- und Herschieben zwischen verschiedenen Mitarbeitern wesentlich vereinfacht. Man kann so auch verschiedene Versionen, z.B. mit verschiedenen Bildern, erstellen und mit <i>Sammeln f&uuml;r Ausgabe</i> in verschiedenen Ordnern speichern.</p></td></tr>
+</table>
+<h3>Probleme vermeiden</h3>
+<table cellpadding="3" width="80%">
+<tr><td><p>Wenn man Dateien in diesem Ordner verschiebt oder l&ouml;scht, mu&szlig; man sehr vorsichtig sein. Sehen wir uns an, was passieren kann.</p>
+<p>Rechts sehen wir die urspr&uuml;ngliche Situation vor <i>Sammeln f&uuml;r Ausgabe</i>. Wir haben das Scribus-Dokument in einem Ordner und die Bilder vielleicht verstreut in anderen. Nach dem <i>Sammeln f&uuml;r Ausgabe</i> bleiben diese Bilder in ihren Ordnern.</p>
+<p>Scribus speichert f&uuml;r jedes Bild nur den relativen Pfad &ndash; relativ zu dem Ort, an dem das <code>.sla</code> gespeichert ist.</p>
+<td><img src="images/collect_out5.png"></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><p>Nach <i>Sammeln f&uuml;r Ausgabe</i> sind die Dokument-Datei und Kopien aller Bilder im neuen Ordner und die relativen Pfade verlinken dorthin. Wenn man nun ein Bild aus dem Ordner verschiebt oder l&ouml;scht, bleibt die Referenzierung und man hat ein fehlendes Bild.</p>
+<p>Eine L&ouml;sung w&auml;re, zum originalen Dokument zu gehen und nochmals <i>Sammeln f&uuml;r Ausgabe</i> auszuf&uuml;hren, aber dies w&uuml;rde zum Verlust aller zwischenzeitlichen &Auml;nderungen f&uuml;hren. Plan B w&auml;re, das gesammelte Dokument umzubenennen, beim Original wieder f&uuml;r die Ausgabe sammeln und die umbenannte Datei zur&uuml;ck umzubenennen.</p>
+<p>Ansonsten mu&szlig; man wirklich im Original-Dokument das fehlende Bild suchen.</p>
+<p>Wir haben Sie gewarnt.</p>
+<td><img src="images/collect_out6.png"></td></tr>
+
+</table>
+</body>
+</html>

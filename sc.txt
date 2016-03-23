@@ -1,0 +1,2 @@
+aur/scribus-svn 21022-1 (36)
+    A desktop publishing program - Version from SVN

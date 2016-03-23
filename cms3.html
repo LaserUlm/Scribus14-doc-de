@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Render-Priorit&auml;ten</title>
+</head>
+<body>
+<h2>Render-Priorit&auml;ten</h2>
+
+<p><i>Render-Priorit&auml;ten</i> sind f&uuml;r Neu-Einsteiger in das Thema Farbmanagement wirklich verwirrend. Im Grunde geht es darum, welche Priorit&auml;ten man setzt, wenn Farben von einem Farbraum in einen anderen &uuml;berf&uuml;hrt werden sollen. Es gibt vier Render-Priorit&auml;ten:</p>
+<ul>
+<li><b>Wahrnehmung:</b> Hier werden Farben durch das Beibehalten ihres Verh&auml;ltnisses untereinander &raquo;sacht&laquo; umgewandelt. Eine &raquo;Verkleinerung des Farbspektrums&laquo; mit dem dadurch m&ouml;glichen Verlust der Detailtreue wird ebenso vermieden, wie &raquo;Streifenbildung&laquo; statt eines flie&szlig;enden &Uuml;bergangs der Farbt&ouml;ne. Das Spektrum wird verkleinert, wenn zwei oder mehr Farben, die im Ausgangsbild unterschiedlich sind, nach dem Druck gleich aussehen. Beim Rendern mit der Priorit&auml;t auf Wahrnehmung werden kleine Einstellungen am ganzen Bld gemacht, um das Verh&auml;ltnis der Farben untereinander beizubehalten. Es gew&auml;hrt eine gewisse Pr&auml;zision der Farben, um zufriedenstellende Ergebnisse zu erhalten. Dies ist normalerweise f&uuml;r Fotografien und eingescannte Bilder die beste Einstellung.<br>Wahrnehmung erzielt die am besten vorhersagbaren Resultate, wenn man viele Bildarten drucken will, z.B. RGB-Bilder mit einem CMYK-Ger&auml;t, oder mit komplett verschiedenen CMYK-Profilen.<br> Dies ist die &raquo;idiotensichere&laquo; Einstellung f&uuml;r Anwender, die viele Bilder verarbeiten.</li> 
+
+<li><b>Farbs&auml;ttigung</b> sollte f&uuml;r Logos, <a href="color1.html">Schmuckfarben</a> usw. genommen werden. Es erh&auml;lt die Anzahl und die Lebendigkeit der Farben, allerdings k&ouml;nnen Fotos damit h&auml;&szlig;lich aussehen. Wenn es um Logos mit einem spezifischen Farbton geht, hat man mit Farbs&auml;ttigung eine gr&ouml;&szlig;ere Farbtreue. Es ist die richtige Wahl, falls man mehr Wert auf die Farbe des Logos als die Farben der Bilder legt.</li>
+
+<li><b>Absolut farbmetrisch:</b> Falls eine Farbe nicht im Spektrum des Druckers ist, wird hier einfach die beste &Uuml;bereinstimmung genommen. Kompromi&szlig;los werden Farben innerhalb des Farbspektrums erstellt. Schmuckfarben werden so am genauesten wiedergegeben. Allerdings kann es damit zu einer &raquo;Verkleinerung des Spektrums&laquo; kommen, bei der zwei im Original unterschiedliche Farben im Druck identisch sind. Wei&szlig;e Stellen werden dabei &auml;hnlich behandelt, was zu Problemen bei hellen Stellen in Fotos f&uuml;hrt. Durch diese Einschr&auml;nkungen mit den daraus resultierenden Problemen kann diese Einstellung eigentlich nur f&uuml;r Schmuckfarben verwendet werden. Bilder haben oft einen Gelbstich, was daran liegt, da&szlig; die Farbwerte mit einer D50-Lichtquelle bei exakt 5000 Kelvin gemessen werden. Gegen&uuml;ber nat&uuml;rlicheren Bedingungen ist dies eine &raquo;w&auml;rmere&laquo; Farbtemperatur. Diese Einstellung wird eigentlich nur genommen, wenn ein Firmenzeichen oder eine Farbe unabh&auml;ngig vom Medium exakt dargestellt werden mu&szlig;. Das Kodak-Gelb oder das Telekom-Magenta sind daf&uuml;r gute Beispiele.</li>
+
+<li><b>Relativ farbmetrisch:</b> Wenn eine Farbe nicht im gew&auml;hlten Farbspektrum gedruckt werden kann, wird hier die Farbe genommen, die ihr am n&auml;chsten kommt. Zudem wird der &raquo;Wei&szlig;punkt&laquo; dem Ausgabemedium angepa&szlig;t. Dieses Anpassung des Wei&szlig;punkts vermeidet die Probleme von &raquo;Absolut farbmetrisch&laquo; bei Grafiken, die nicht mit Schmuckfarben gedruckt werden.</li>
+</ul>
+
+<p>Bei Scribus kann man die Render-Priorit&auml;t f&uuml;r Bilder und F&uuml;llfarben getrennt festlegen. Man kann z.B. f&uuml;r Bilder Wahrnehmung w&auml;hlen und den Hintergrund oder die Schriftfarbe gem&auml;&szlig; der &raquo;Corporate Identity&laquo; absolut oder relativ farbmetrisch rendern lassen.</p> 
+</body>
+</html>
